@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>TypeScript Todo App</title>
+        <style>
+          body {
+            font-family: Arial sans-serif;
+            margin: 50px;
+          }
+          #todo-form {
+            margin-bottom: 20px;
+          }
+          .completed {
+            text-decoration: line-through;
+            color: gray;
+          }
+        </style>
+    </head>
+    <body>
+      <h1>Todoリスト</h1>
+      <form id="todo-form">
+        <input type="text" id="todo-input" placeholder="新しいTodoを入力" required />
+        <button type="submit">追加</button>
+      </form>
+      <ul id="todo-list"></ul>
+
+      <script src="./dist/app.js"></script>
+    </body>
+</html>
