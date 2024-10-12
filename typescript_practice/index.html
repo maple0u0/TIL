@@ -3,27 +3,28 @@
     <head>
         <meta charset="UTF-8">
         <title>TypeScript Todo App</title>
-        <style>
-          body {
-            font-family: Arial sans-serif;
-            margin: 50px;
-          }
-          #todo-form {
-            margin-bottom: 20px;
-          }
-          .completed {
-            text-decoration: line-through;
-            color: gray;
-          }
-        </style>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-      <h1>Todoリスト</h1>
-      <form id="todo-form">
-        <input type="text" id="todo-input" placeholder="新しいTodoを入力" required />
-        <button type="submit">追加</button>
-      </form>
+      <header>
+        <div class="container">
+          <h3>Todo List</h3>
+          <button id="add-todo-btn" class="add-button">＋</button>
+        </div>
+      </header>
       <ul id="todo-list"></ul>
+
+      <!-- モーダルの追加 -->
+      <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>新しいTodoを追加</h2>
+          <form id="modal-todo-form">
+            <input type="text" id="modal-todo-input" placeholder="Todoを入力" required />
+            <button type="submit">追加</button>
+          </form>
+        </div>
+      </div>
 
       <script src="./dist/app.js"></script>
     </body>
